@@ -1,5 +1,5 @@
 import home_frame from '../../assets/optimized/momo.png';
-import mobile_frame from '../../assets/Home Hero.png';
+import mobile_frame from '../../assets/optimized/momo.png';
 
 const HeroSection = () => {
   return (

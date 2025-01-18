@@ -10,7 +10,6 @@ const Home = lazy(() => import('./Component/Home_Page/Home'));
 const About = lazy(() => import('./Component/About_Us/About'));
 const Resume = lazy(() => import('./Component/Resume/Resume'));
 const Contact = lazy(() => import('./Component/Contact_Us/Contact'));
-const Howitswork = lazy(() => import('./Component/HowItsWorkFolder/Howitswork'));
 
 const pageVariants = {
   initial: { opacity: 0, y: 50 },
@@ -58,7 +57,6 @@ function App() {
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<AnimatedPage><Suspense fallback={<div className="flex justify-center items-center h-screen"><ClipLoader color="#FF5F1E" size={50} /></div>}><Home /></Suspense></AnimatedPage>} />
                 <Route path="/about" element={<AnimatedPage><Suspense fallback={<div className="flex justify-center items-center h-screen"><ClipLoader color="#FF5F1E" size={50} /></div>}><About /></Suspense></AnimatedPage>} />
-                <Route path="/how-we-started" element={<AnimatedPage><Suspense fallback={<div className="flex justify-center items-center h-screen"><ClipLoader color="#FF5F1E" size={50} /></div>}><Howitswork /></Suspense></AnimatedPage>} />
                 <Route path="/resume" element={<AnimatedPage><Suspense fallback={<div className="flex justify-center items-center h-screen"><ClipLoader color="#FF5F1E" size={50} /></div>}><Resume /></Suspense></AnimatedPage>} />
                 <Route path="/contact" element={<AnimatedPage><Suspense fallback={<div className="flex justify-center items-center h-screen"><ClipLoader color="#FF5F1E" size={50} /></div>}><Contact /></Suspense></AnimatedPage>} />
               </Routes>
