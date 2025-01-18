@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion, useInView } from 'framer-motion';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { motion, useInView } from "framer-motion";
 
 const AnimatedSection = ({ children }) => {
   const ref = React.useRef(null);
@@ -19,6 +19,32 @@ const AnimatedSection = ({ children }) => {
 };
 
 function Resume() {
+  const education = [
+    {
+      school: "University of Cincinnati",
+      degree: "Bachelors in Information Technology, Software Engineering",
+      date: "January 2020 - December 2024",
+      gpa: "3.906/4.0",
+      achievements: [
+        "Dean's List (January 2020 - May 2024)",
+      ],
+    },
+  ];
+
+  const certificates = [
+    {
+      name: "Bloom Institute of Technology",
+      title: "Full Stack Software Engineering Certification",
+      date: "June 2021 - April 2022",
+      issuer: "Lambda School",
+    },
+    {
+      name: "Google Coursera",
+      title: "Foundations of User Experience (UX) Design",
+      date: "April 2021",
+      issuer: "Google",
+    },
+  ];
   const experiences = [
     {
       company: "Medpace",
@@ -30,8 +56,8 @@ function Resume() {
         "Developed and maintained scalable backend services using C# and SQL Server for clinical research data management",
         "Enhanced website functionality for 30+ doctors, improving clinical research collaboration",
         "Collaborated in an agile environment to modernize legacy systems",
-        "Implemented efficient version control practices for large-scale projects"
-      ]
+        "Implemented efficient version control practices for large-scale projects",
+      ],
     },
     {
       company: "OBAI",
@@ -42,8 +68,8 @@ function Resume() {
       points: [
         "Established Git version control for a full-stack AI web application",
         "Developed responsive Frontend components using React.js for 30% mobile user adoption",
-        "Created customizable logo update feature for consistent branding"
-      ]
+        "Created customizable logo update feature for consistent branding",
+      ],
     },
     {
       company: "E-commony",
@@ -54,9 +80,9 @@ function Resume() {
       points: [
         "Implemented Angular and Material UI for touch screen pin code system",
         "Created Flask-based SQL database and API endpoints for food locker monitoring",
-        "Containerized backend services using Docker for AWS deployment"
-      ]
-    }
+        "Containerized backend services using Docker for AWS deployment",
+      ],
+    },
   ];
 
   const projects = [
@@ -66,8 +92,8 @@ function Resume() {
       tech: "Flutter",
       points: [
         "Designed intuitive UI for nutritional goal tracking",
-        "Implemented multi-step user onboarding for personalized recommendations"
-      ]
+        "Implemented multi-step user onboarding for personalized recommendations",
+      ],
     },
     {
       name: "Water My Plants",
@@ -75,27 +101,89 @@ function Resume() {
       tech: "React | Axios | Hooks | CSS | State Management",
       points: [
         "Developed authentication system using Axios and React Hooks",
-        "Led junior developers in building full-stack website using agile methodology"
-      ]
-    }
+        "Led junior developers in building full-stack website using agile methodology",
+      ],
+    },
   ];
 
   return (
     <div className="bg-[white] pt-20">
       <Helmet>
         <title>Mo Daniel - Resume</title>
-        <meta name="description" content="Software Engineer with experience in full-stack development" />
+        <meta
+          name="description"
+          content="Software Engineer with experience in full-stack development"
+        />
       </Helmet>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20 xl:px-24 py-16">
+        {/* Education */}
+        <AnimatedSection>
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-[#171717] mb-6">
+              Education
+            </h2>
+            <div className="space-y-12">
+              {education.map((edu, index) => (
+                <div key={index} className="border-l-4 border-[#c35661] pl-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#171717]">
+                        {edu.school}
+                      </h3>
+                      <p className="text-[#606060] font-medium">{edu.degree}</p>
+                      <p className="text-[#c35661] text-sm">GPA: {edu.gpa}</p>
+                    </div>
+                    <p className="text-[#606060]">{edu.date}</p>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-[#606060]">
+                    {edu.achievements.map((achievement, i) => (
+                      <li key={i}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Certificates */}
+        <AnimatedSection>
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-[#171717] mb-6">
+              Certifications
+            </h2>
+            <div className="space-y-8">
+              {certificates.map((cert, index) => (
+                <div key={index} className="border-l-4 border-[#c35661] pl-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#171717]">
+                        {cert.name}
+                      </h3>
+                      <p className="text-[#606060] font-medium">{cert.title}</p>
+                    </div>
+                    <p className="text-[#606060]">{cert.date}</p>
+                  </div>
+                  <p className="text-[#c35661] text-sm">{cert.issuer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
         {/* Technical Skills */}
         <AnimatedSection>
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-[#171717] mb-6">Technical Skills</h2>
+            <h2 className="text-2xl font-bold text-[#171717] mb-6">
+              Technical Skills
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#606060]">
               <div>
                 <h3 className="font-semibold mb-2">Frontend Development</h3>
-                <p>React.js, Angular, HTML, CSS, JavaScript, Redux, Hooks, Jest</p>
+                <p>
+                  React.js, Angular, HTML, CSS, JavaScript, Redux, Hooks, Jest
+                </p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Backend Development</h3>
@@ -116,13 +204,17 @@ function Resume() {
         {/* Work Experience */}
         <AnimatedSection>
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-[#171717] mb-6">Experience</h2>
+            <h2 className="text-2xl font-bold text-[#171717] mb-6">
+              Experience
+            </h2>
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div key={index} className="border-l-4 border-[#c35661] pl-6">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-[#171717]">{exp.company}</h3>
+                      <h3 className="text-xl font-bold text-[#171717]">
+                        {exp.company}
+                      </h3>
                       <p className="text-[#606060] font-medium">{exp.role}</p>
                     </div>
                     <p className="text-[#606060]">{exp.date}</p>
@@ -147,7 +239,9 @@ function Resume() {
               {projects.map((project, index) => (
                 <div key={index} className="border-l-4 border-[#c35661] pl-6">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-[#171717]">{project.name}</h3>
+                    <h3 className="text-xl font-bold text-[#171717]">
+                      {project.name}
+                    </h3>
                     <p className="text-[#606060] font-medium">{project.role}</p>
                   </div>
                   <p className="text-[#c35661] text-sm mb-4">{project.tech}</p>
