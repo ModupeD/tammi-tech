@@ -1,5 +1,3 @@
-Here's the README using markdown code formatting:
-
 ```markdown
 # Mo's Portfolio Website
 
