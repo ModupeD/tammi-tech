@@ -1,6 +1,9 @@
-# OBAI Website
+Here's the README using markdown code formatting:
 
-Welcome to the official **OBAI Website** project repository! This website is built to help users streamline their automotive repair and insurance claim processes through AI-powered solutions.
+```markdown
+# Mo's Portfolio Website
+
+Welcome to my personal **Portfolio Website** project repository! This website showcases my work as a Software Engineer, featuring projects, experiences, and professional journey.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -14,26 +17,26 @@ Welcome to the official **OBAI Website** project repository! This website is bui
 
 ## Project Overview
 
-The OBAI website is designed to assist users in speeding up their **vehicle repair** and **insurance claim** processes. By utilizing AI, particularly the **RepairBot**, users can quickly document damages, process claims, and get real-time assistance in the repair process.
+This portfolio website is designed to showcase my software engineering journey, highlighting my work with **React.js**, mobile app development using **Flutter** and **React Native**, and my passion for creating meaningful user experiences.
 
-The platform also provides useful **resources** for understanding automotive repairs and the insurance claims process, helping insurance adjusters, claimants, and repair shops.
+The platform also features my **projects** with companies like Amerifusion, ASL Solutions, and other significant contributions to the tech industry.
 
 ## Features
 
-- **RepairBot**: AI-powered assistance for vehicle repairs and insurance claims.
-- **Resources**: A comprehensive section containing articles, FAQs, and guides to help users better understand the repair and claim process.
-- **Responsive Design**: Fully responsive website design that works across mobile, tablet, and desktop.
-- **Animations & Smooth Transitions**: Leveraging **Framer Motion** for fluid animations and transitions.
-- **Contact & Demo Pages**: Easy access to support and a demo of the AI-powered services.
+- **Project Showcase**: Highlighting key projects and professional experiences
+- **Resume**: Comprehensive overview of my technical skills and work history
+- **Responsive Design**: Fully responsive website design that works across mobile, tablet, and desktop
+- **Animations & Smooth Transitions**: Leveraging **Framer Motion** for fluid animations and transitions
+- **Contact & Scheduling**: Easy access through multiple platforms and Calendly integration
   
 ## Technology Stack
 
-- **React**: JavaScript library for building the user interface.
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
-- **Framer Motion**: Animation library for smooth transitions and UI interactions.
-- **React Router**: Handles routing between different pages.
-- **Lazy Loading**: Components are lazy-loaded to improve performance.
-- **Google Fonts**: Used for typography.
+- **React**: JavaScript library for building the user interface
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Framer Motion**: Animation library for smooth transitions and UI interactions
+- **React Router**: Handles routing between different pages
+- **Lazy Loading**: Components are lazy-loaded to improve performance
+- **Google Fonts**: Used for typography
   
 ## Installation
 
@@ -41,11 +44,11 @@ To set up and run the project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/DevTaiwo18/OBAI-WEBSITE.git
+    git clone https://github.com/ModupeD/portfolio.git
     ```
 2. Navigate into the project directory:
     ```bash
-    cd obai-website
+    cd portfolio
     ```
 3. Install all dependencies:
     ```bash
@@ -69,3 +72,11 @@ To set up and run the project locally, follow these steps:
     npm run preview
     ```
 
+## Contact
+
+You can reach me through:
+- GitHub: [ModupeD](https://github.com/ModupeD)
+- LinkedIn: [Modupe Daniel](https://linkedin.com/in/modupe-daniel)
+- Email: daniemu@mail.uc.edu
+- Schedule a Call: [Calendly](https://calendly.com/codewithmomo/code-with-momo)
+```
