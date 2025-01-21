@@ -22,7 +22,7 @@ const Awards = () => {
     ];
   
     return (
-        <div className="w-full overflow-hidden bg-[#c35661] py-4">
+        <div className="w-full overflow-hidden bg-[#c35661] py-2 md:mt-0 mt-3">
           <div className="relative flex">
             <div className="flex animate-scroll-infinite">
               {[...awards, ...awards, ...awards].map((award, index) => (
@@ -82,3 +82,5 @@ const Awards = () => {
     };
     
     export default Awards;
+    
+    
