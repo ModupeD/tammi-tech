@@ -75,4 +75,4 @@ You can reach me through:
 - GitHub: [ModupeD](https://github.com/ModupeD)
 - LinkedIn: [Modupe Daniel](https://linkedin.com/in/modupe-daniel)
 - Email: daniemu@mail.uc.edu
-- Schedule a Call: [Calendly](https://calendly.com/codewithmomo/code-with-momo)
+- Schedule a Call: [Calendly](https://calendly.com/obai/code-with-momo)

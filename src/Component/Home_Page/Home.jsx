@@ -5,6 +5,7 @@ import HeroSection from './HeroSection';
 import KeyFeatures from './KeyFeatures';
 import Ecosystem from './Ecosystem';
 import GetInTouch from '../GeneralComponent/GetInTouch';
+import Awards from './Awards';  // Add this import
 
 const AnimatedSection = ({ children }) => {
   const ref = React.useRef(null);
@@ -27,7 +28,7 @@ function Home() {
     <div className="pt-19 md:pt-23"> {/* Added padding-top */}
       <Helmet>
         <title>Mo - Portfolio</title>
-        <meta name="description" content="Welcome to the OBAI website home page." />
+        <meta name="description" content="Welcome to the obai website home page." />
       </Helmet>
       
       <AnimatedSection>
@@ -35,12 +36,19 @@ function Home() {
       </AnimatedSection>
 
       <AnimatedSection>
+        <Awards />
+      </AnimatedSection>
+
+      <AnimatedSection>
         <KeyFeatures />
       </AnimatedSection>
+
 
       <AnimatedSection>
         <Ecosystem />
       </AnimatedSection>
+
+      
 
       <AnimatedSection>
         <GetInTouch />
