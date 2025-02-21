@@ -8,14 +8,12 @@ import nwp from '../../assets/optimized/nwp-logo.png';
 import travelAdvisor from '../../assets/optimized/travel_advisor.png';
 import ologVideo from '../../assets/optimized/olog.mov';
 import PropTypes from 'prop-types';
-// Add imports for NWP posters
 import nwpMen from '../../assets/optimized/nwp-men.png';
 import nwpWomen from '../../assets/optimized/nwp-women.jpg';
 import nwpMain from '../../assets/optimized/NWP.png';
 import nwpRealTalk from '../../assets/optimized/MEN-real-talk.png';
 import nwpVirtual from '../../assets/optimized/NWP-VIRTUAL.png';
 import nwpVirtuaHangout from '../../assets/optimized/nwphangout.png';
-// Add NWP poster images
 const nwpPosters = [
   nwpMain,
   nwpRealTalk,
