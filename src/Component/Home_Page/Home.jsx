@@ -36,13 +36,12 @@ function Home() {
       </AnimatedSection>
 
       <AnimatedSection>
-        <Awards />
-      </AnimatedSection>
-
-      <AnimatedSection>
         <KeyFeatures />
       </AnimatedSection>
 
+      <AnimatedSection>
+        <Awards />
+      </AnimatedSection>
 
       <AnimatedSection>
         <Ecosystem />

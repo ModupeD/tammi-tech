@@ -5,7 +5,7 @@ import eco3 from '../../assets/optimized/Amerifusion-Govecon.jpg';
 import eco4 from '../../assets/optimized/asl.png';
 import eco5 from '../../assets/optimized/olog.png';
 import nwp from '../../assets/optimized/nwp-logo.png';
-import bloomyLogo from '../../assets/optimized/bloomyLogo.png';
+import travelAdvisor from '../../assets/optimized/travel_advisor.png';
 import ologVideo from '../../assets/optimized/olog.mov';
 import PropTypes from 'prop-types';
 // Add imports for NWP posters
@@ -32,7 +32,7 @@ const logos = [
     bgColor: "#161e3e",
     scale: "scale-[1.6]",
     link: "https://amerifusionconsulting.com",
-    description: "Financial Consulting Platform, Software Engineer"
+    description: "Software Engineer"
   },
   { 
     src: eco3, 
@@ -67,10 +67,11 @@ const logos = [
     type: "nwp"
   },
   { 
-    src: bloomyLogo, 
-    alt: "bloomyLogo",
+    src: travelAdvisor, 
+    alt: "Travel Advisor Logo",
     bgColor: "white",
-    scale: "scale-100",
+    scale: "scale-[1.6]",
+    link: "https://github.com/ModupeD/travel-advisor/",
     description: "Brand Designer & IT Trainer",
     type: "nwp"
   }
@@ -193,13 +194,14 @@ const Modal = ({ isOpen, onClose, project }) => {
     <AnimatePresence>
       <motion.div
         className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto"
+        style={{ alignItems: 'flex-start', paddingTop: `${window.scrollY + 100}px` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
       >
         <motion.div
-          className="bg-white rounded-2xl w-full max-w-3xl my-auto mx-auto"
+          className="bg-white rounded-2xl w-full max-w-3xl mx-auto"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}

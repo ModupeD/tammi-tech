@@ -78,13 +78,25 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-[#171717] hover:text-[#FF5F1E] text-sm font-bold transition-colors duration-300"
-              >
-                {item.name}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#171717] hover:text-[#FF5F1E] text-sm font-bold transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-[#171717] hover:text-[#FF5F1E] text-sm font-bold transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -134,14 +146,27 @@ export default function Header() {
 
           <nav className="flex flex-col gap-4">
             {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-[#171717] hover:text-[#FF5F1E] font-bold py-1 transition-colors duration-300"
-                onClick={toggleMenu}
-              >
-                {item.name}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#171717] hover:text-[#FF5F1E] font-bold py-1 transition-colors duration-300"
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-[#171717] hover:text-[#FF5F1E] font-bold py-1 transition-colors duration-300"
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
         </div>
