@@ -72,8 +72,8 @@ const logos = [
     bgColor: "white",
     scale: "scale-[1.6]",
     link: "https://github.com/ModupeD/travel-advisor/",
-    description: "Brand Designer & IT Trainer",
-    type: "nwp"
+    description: "Software Engineer",
+    type: "travelAdvisor"
   }
 ];
 
