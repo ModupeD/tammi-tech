@@ -39,7 +39,7 @@ const courses = [
 
 function Courses() {
   return (
-    <div className="bg-[#eddbd2] pt-20">
+    <div className="bg-white pt-20">
       <Helmet>
         <title>Courses - Tammi Tech Bootcamp</title>
         <meta name="description" content="Explore our comprehensive tech bootcamp courses" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/optimized/LOGO-T.png';
-import { Github, Linkedin, Youtube } from 'lucide-react';
+
 
 function Footer() {
   return (

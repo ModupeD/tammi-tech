@@ -3,7 +3,7 @@ import mobile_frame from '../../assets/optimized/tammi.png';
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#FFFDF9]">
+    <div className="bg-white">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20 xl:px-24">
         <div className="md:hidden flex justify-center">
           <img src={mobile_frame} alt="Mobile frame" className="w-full h-auto" />
