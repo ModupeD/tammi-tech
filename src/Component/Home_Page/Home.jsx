@@ -1,58 +1,73 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import HeroSection from './HeroSection';
 import KeyFeatures from './KeyFeatures';
 import Ecosystem from './Ecosystem';
 import GetInTouch from '../GeneralComponent/GetInTouch';
-import Awards from './Awards';  // Add this import
 
-const AnimatedSection = ({ children }) => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      {children}
-    </motion.div>
-  );
+const fadeUpVariant = {
+  hidden: { 
+    opacity: 0, 
+    y: 100,
+  },
+  visible: (index) => ({ 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.6, -0.05, 0.01, 0.99],
+      delay: index * 0.1
+    }
+  })
 };
 
 function Home() {
   return (
-    <div className="pt-19 md:pt-23"> {/* Added padding-top */}
+    <div className="pt-19 md:pt-23">
       <Helmet>
-        <title>Mo - Portfolio</title>
+        <title>Tammi Tech</title>
         <meta name="description" content="Welcome to the obai website home page." />
       </Helmet>
       
-      <AnimatedSection>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        custom={0}
+        variants={fadeUpVariant}
+      >
         <HeroSection />
-      </AnimatedSection>
+      </motion.div>
 
-      <AnimatedSection>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        custom={1}
+        variants={fadeUpVariant}
+      >
         <KeyFeatures />
-      </AnimatedSection>
+      </motion.div>
 
-      <AnimatedSection>
-        <Awards />
-      </AnimatedSection>
-
-      <AnimatedSection>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        custom={2}
+        variants={fadeUpVariant}
+      >
         <Ecosystem />
-      </AnimatedSection>
+      </motion.div>
 
-      
-
-      <AnimatedSection>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        custom={3}
+        variants={fadeUpVariant}
+      >
         <GetInTouch />
-      </AnimatedSection>
-
+      </motion.div>
     </div>
   );
 }

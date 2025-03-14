@@ -1,6 +1,6 @@
-# Mo's Portfolio Website
+# Tammi Tech Bootcamp
 
-Welcome to my personal **Portfolio Website** project repository! This website showcases my work as a Software Engineer, featuring projects, experiences, and professional journey.
+Welcome to the **Tammi Tech Bootcamp** website repository! This platform offers comprehensive tech education in Cybersecurity, Software Engineering, UI/UX Design, and Networking.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -9,70 +9,63 @@ Welcome to my personal **Portfolio Website** project repository! This website sh
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
 - [Folder Structure](#folder-structure)
-- [Performance Optimizations](#performance-optimizations)
 - [Contact](#contact)
 
 ## Project Overview
 
-This portfolio website is designed to showcase my software engineering journey, highlighting my work with **React.js**, mobile app development using **Flutter** and **React Native**, and my passion for creating meaningful user experiences.
+Tammi Tech Bootcamp is a leading tech education platform in Nigeria, offering intensive training programs in:
+- Cybersecurity
+- Software Engineering
+- UI/UX Design
+- Networking
 
-The platform also features my **projects** with companies like Amerifusion, ASL Solutions, and other significant contributions to the tech industry.
+The platform features a secure payment system supporting both Stripe payments and direct bank transfers in Naira.
 
 ## Features
 
-- **Project Showcase**: Highlighting key projects and professional experiences
-- **Resume**: Comprehensive overview of my technical skills and work history
-- **Responsive Design**: Fully responsive website design that works across mobile, tablet, and desktop
-- **Animations & Smooth Transitions**: Leveraging **Framer Motion** for fluid animations and transitions
-- **Contact & Scheduling**: Easy access through multiple platforms and Calendly integration
+- **Course Catalog**: Detailed information about each bootcamp program
+- **Payment Integration**: Secure payments via Stripe and local bank transfers
+- **Student Dashboard**: Track progress and access course materials
+- **Responsive Design**: Fully responsive website design
+- **Application Process**: Streamlined enrollment system
   
 ## Technology Stack
 
 - **React**: JavaScript library for building the user interface
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
-- **Framer Motion**: Animation library for smooth transitions and UI interactions
-- **React Router**: Handles routing between different pages
-- **Lazy Loading**: Components are lazy-loaded to improve performance
-- **Google Fonts**: Used for typography
+- **Tailwind CSS**: Utility-first CSS framework
+- **Stripe API**: Payment processing
+- **React Router**: Navigation handling
+- **Framer Motion**: Animations
   
 ## Installation
 
-To set up and run the project locally, follow these steps:
-
 1. Clone the repository:
     ```bash
-    git clone https://github.com/ModupeD/portfolio.git
+    git clone https://github.com/TammiTech/bootcamp-website.git
     ```
 2. Navigate into the project directory:
     ```bash
-    cd portfolio
+    cd bootcamp-website
     ```
-3. Install all dependencies:
+3. Install dependencies:
     ```bash
     npm install
     ```
 
 ## Running the Project
 
-1. To start the development server, run:
+1. Start development server:
     ```bash
     npm run dev
     ```
 
-2. For production builds, use:
+2. Build for production:
     ```bash
     npm run build
     ```
 
-3. To preview the build:
-    ```bash
-    npm run preview
-    ```
-
 ## Contact
 
-You can reach me through:
-- GitHub: [ModupeD](https://github.com/ModupeD)
-- LinkedIn: [Modupe Daniel](https://linkedin.com/in/modupe-daniel)
-- Email: daniemu@mail.uc.edu
-- Schedule a Call: [Calendly](https://calendly.com/obai/code-with-momo)
+- Email: info@tammitech.com
+- Phone: +234 XXX XXX XXXX
+- Address: Lagos, Nigeria

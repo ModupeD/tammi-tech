@@ -4,62 +4,33 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Header from './Component/Layout/Header';
 import Footer from './Component/Layout/Footer';
 import './index.css';
+import logo from '../src/assets/optimized/LOGO-T.png';
 
 // Import custom LoadingScreen
 const LoadingScreen = () => {
-  const techStack = [
-    { name: 'React', color: '#61DAFB' },
-    { name: 'Node.js', color: '#339933' },
-    { name: 'TypeScript', color: '#3178C6' },
-    { name: 'AWS', color: '#FF9900' }
-  ];
-
   return (
-    <div className="fixed inset-0 bg-[#eddbd2] flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
       <div className="text-center">
-        <div className="mb-8">
-          <motion.h1 
-            className="text-4xl font-bold text-[#c35661] mb-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Welcome to Code with Momo
-          </motion.h1>
-          <motion.p 
-            className="text-[#606060]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Building something awesome...
-          </motion.p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-4 max-w-md mx-auto">
-          {techStack.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              className="bg-white px-4 py-2 rounded-full shadow-md"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                repeat: Infinity,
-                repeatType: "reverse",
-                repeatDelay: 0.5
-              }}
-              style={{
-                border: `2px solid ${tech.color}`
-              }}
-            >
-              <span className="font-medium" style={{ color: tech.color }}>
-                {tech.name}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div 
+          className="mb-8"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img
+            src={logo}
+            alt="Tammi Tech"
+            className="h-24 w-auto mx-auto"
+          />
+        </motion.div>
+        <motion.p 
+          className="text-black text-lg font-medium"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Empowering African Tech Talent
+        </motion.p>
       </div>
     </div>
   );
@@ -68,8 +39,9 @@ const LoadingScreen = () => {
 // Lazy load components
 const Home = lazy(() => import('./Component/Home_Page/Home'));
 const About = lazy(() => import('./Component/About_Us/About'));
-const Resume = lazy(() => import('./Component/Resume/Resume'));
 const Contact = lazy(() => import('./Component/Contact_Us/Contact'));
+const Courses = lazy(() => import('./Component/Courses/Courses'));
+const Apply = lazy(() => import('./Component/Apply/Apply'));
 
 const pageVariants = {
   initial: { opacity: 0, y: 50 },
@@ -98,8 +70,8 @@ function App() {
   }, [location.pathname]);
 
   useEffect(() => {
-    // Longer initial loading time to show the tech stack
-    setTimeout(() => setIsLoading(false), 3000);
+    // Reduced loading time from 3000ms to 1500ms
+    setTimeout(() => setIsLoading(false), 1000);
   }, []);
 
   return (
@@ -133,11 +105,21 @@ function App() {
                   } 
                 />
                 <Route 
-                  path="/resume" 
+                  path="/courses" 
                   element={
                     <AnimatedPage>
                       <Suspense fallback={<LoadingScreen />}>
-                        <Resume />
+                        <Courses />
+                      </Suspense>
+                    </AnimatedPage>
+                  } 
+                />
+                <Route 
+                  path="/apply" 
+                  element={
+                    <AnimatedPage>
+                      <Suspense fallback={<LoadingScreen />}>
+                        <Apply />
                       </Suspense>
                     </AnimatedPage>
                   } 
