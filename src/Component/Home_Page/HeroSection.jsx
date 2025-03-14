@@ -1,5 +1,5 @@
 import home_frame from '../../assets/optimized/tammi.png';
-import mobile_frame from '../../assets/optimized/momo.png';
+import mobile_frame from '../../assets/optimized/tammi.png';
 
 const HeroSection = () => {
   return (
